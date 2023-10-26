@@ -5,7 +5,7 @@ export default function EventPage() {
 
     const events = [
         {
-            img: '/December.jpg',
+            img: "/December.jpg",
             text: 'Celebrating 9 Years of Success!',
             year: "1st December 2023"
         },
