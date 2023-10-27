@@ -6,7 +6,7 @@ export default function page() {
     <>
     {/* <PictureGallery /> */}
     <div className='student-container'>
-        <h1 className='text-2xl'>Student Pictures</h1>
+        <h1 className='text-2xl max-lg:text-xl'>Student Pictures</h1>
   
         <p><Link href={"student-pictures/level/KG"}>Class Play Group Picture</Link></p>
         <p><Link href={"student-pictures/level/Nursery"}>Class Nursery Picture</Link></p>

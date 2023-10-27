@@ -1,7 +1,7 @@
 export default function EventPictureBox({eventName,year,pic}) {
   return (
     <>
-    <div className='w-[300px] p-3 flex flex-col'>
+    <div className='max-lg:w-[270px] w-[300px] p-3 flex flex-col'>
        <img src={pic} className="w-full"/>
        <div className="flex flex-col  border border-gray-500 space-y-4">
 

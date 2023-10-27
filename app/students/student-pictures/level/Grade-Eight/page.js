@@ -1,6 +1,10 @@
+import PictureGallery from "@/app/parents/components/PictureGallery";
 
 export default function page() {
   return (
-    <div>Grade Eight Student Pictures</div>
+    <>
+    <PictureGallery />
+
+    </>
   )
 }

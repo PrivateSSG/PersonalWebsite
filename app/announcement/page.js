@@ -1,9 +1,8 @@
-import Ann from './components/ann'
 export default function page() {
   return (
     <>
       <div>
-        <Ann />
+        <h1>Annoucement</h1>
 
       </div>
 
