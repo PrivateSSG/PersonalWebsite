@@ -63,7 +63,7 @@ export default function EventPage() {
 
 
       <div className="imagesPart">
-        <img src="./buildImage.jpg" className="w-full " /> */}
+        <img src="./buildImage.jpg" className="w-full " /> 
         <Image
           src={"/buildImage.jpg"}
           width={1320}
