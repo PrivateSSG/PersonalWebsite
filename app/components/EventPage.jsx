@@ -54,17 +54,17 @@ export default function EventPage() {
           Final Result Day
         </h1>
       </div>
-      {/* </div >
-          </div >
-        </div >
-    <button className="bg-green-600 p-2 rounded-md text-xl text-white mt-14 my-14">
-      <Link href={"/events/alllevents"}>See All Event</Link>
-    </button>
-      </div >
+
+
+
+      <button className="bg-green-600 p-2 rounded-md text-xl text-white mt-14 my-14">
+        <Link href={"/events/alllevents"}>See All Event</Link>
+      </button>
+
 
       <div className="imagesPart">
-        {/* <img src="./buildImage.jpg" className="w-full " /> */}
-      {/* <Image
+        <img src="./buildImage.jpg" className="w-full " /> */}
+        <Image
           src={"/buildImage.jpg"}
           width={1320}
           height={500}
@@ -78,8 +78,8 @@ export default function EventPage() {
             CONNECT <span className="text-red-600">WITH US</span>
           </h1>
         </div>
-        <GenralQuery /> */}
-      {/* </div> */} 
+        <GenralQuery />
+      </div>
     </>
   );
 }
