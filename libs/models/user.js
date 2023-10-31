@@ -17,7 +17,9 @@ const userSchema = new mongoose.Schema({
     type: Number,
     require: true,
   },
-  interested: Object,
+  interested: {
+    type: [String]
+  },
   classInterest: {
     type: String,
     require: true,

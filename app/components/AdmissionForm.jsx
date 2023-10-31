@@ -7,71 +7,49 @@ import getConnect from "@/libs/connection";
 export default function AdmissionForm() {
   const [name, setName] = useState("");
   const [fatherName, setFatherName] = useState("");
-  const [contact, setContact] = useState();
+  const [contact, setContact] = useState("");
   const [email, setEmail] = useState("");
-  const [interested, setInterested] = useState("");
+  const [classInterest, setClassInterest] = useState("");
+  const [interested, setInterested] = useState([]);
 
-  const checkList = {
-    school: false,
-    it: false,
-    coaching: false,
-    english: false,
-  };
-  const [checkbox, setCheckedState] = useState({});
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     await getConnect();
-    if (!name || !fatherName || !contact || !email || !interested) {
-      alert("Title and Description is required");
-      return;
-    }
 
     const response = await fetch("http://localhost:3000/api/user", {
+      method: "POST",
       body: JSON.stringify({
         name,
-        fatherName,
-        contact,
         email,
+        fatherName,
+        phoneNumber: contact,
         interested,
-      }),
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-    });
-    if (response.ok) {
-      alert("User Created");
-    }
-    setName("");
-    setFatherName("");
-    setContact("");
-    setEmail("");
-    setInterested("");
+      })
 
-    //submit form
-    // const document = {
-    //   name,
-    //   fatherName,
-    //   contact,
-    //   email,
-    //   checkbox,
+    })
+    console.log(response)
+    if (response.ok) {
+      alert("User Created ")
+    }
   };
 
-  // // Save the document to Appwrite
-  // const data = document;
-  // await databases.createDocument(
-  //   "6537b84f581243c8d965",
-  //   "6537bef49fd2fe4d0630",
-  //   ID.unique(),
-  //   data
-  // );
-  // console.log(data);
-
-  // const handleChange = (e) => {
-  //   // const newCheckBox = { ...checkbox };
-  //   // newCheckBox[e.target.value] = e.target.checkd;
-  //   // setCheckedState(newCheckBox);
-  // };
+  const checkBox = [
+    { value: "School", label: "School" },
+    { value: "English", label: "English" },
+    { value: "it", label: "it" },
+    { value: "Coaching", label: "Coaching" },
+  ]
+  const handleChange = (e) => {
+    const checked = e.target.checked;
+    const value = e.target.value;
+    if (checked && !interested.includes(value)) {
+      setInterested([...interested, value]);
+    } else if (!checked && interested.includes(value)) {
+      setInterested(interested.filter((item) => item !== value));
+    }
+  };
   return (
     <>
       <div className="p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-3/4  max-lg:mb-5 mb-5    mx-auto">
@@ -110,26 +88,30 @@ export default function AdmissionForm() {
             </div>
 
             <div className="flex max-lg:flex-wrap space-x-2">
-              <h1>Interested In</h1>
+              {/* <h1>Interested In</h1>
               <label>School</label>
-              <input type="checkbox" value={checkbox.school} />
+              <input type="checkbox" name={interested.school} value={interested.school} onChange={handleChange} />
               <label>English</label>
-              <input type="checkbox" value={checkbox.english} />
+              <input type="checkbox" value={interested.english} onChange={handleChange} />
               <label>IT</label>
-              <input type="checkbox" value={checkbox.it} />
+              <input type="checkbox" value={interested.it} onChange={handleChange} />
               <label>Coaching</label>
-              <input type="checkbox" value={checkbox.coaching} />
+              <input type="checkbox" value={interested.coaching} onChange={handleChange} /> */}
+              {checkBox.map((checkbox) => (
+                <>
+                  <input
+                    type="checkbox"
+                    key={checkbox.value}
+                    name="interested"
+                    value={checkbox.value}
+                    checked={interested.includes(checkbox.value)}
+                    onChange={handleChange}
+                  />
+                  <label>{checkbox.label}</label>
+                </>
+              ))}
             </div>
-            <div className="flex max-lg:flex-wrap max-lg:space-x-1  space-x-4 items-center">
-              <label>Class Interested In</label>
-              <input
-                className="border border-gray-400 py-2 px-2 rounded-lg"
-                type="text"
-                placeholder="ex: K.G"
-                value={interested}
-                onChange={(e) => setInterested(e.target.value)}
-              />
-            </div>
+
             <div className="mt-9">
               <div className="flex justify-center">
                 <button className="bg-green-500 px-10 hover:bg-green-600 duration-200 py-2 text-white">
