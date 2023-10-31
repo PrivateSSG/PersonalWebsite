@@ -11,9 +11,6 @@ export default function AdmissionForm() {
   const [email, setEmail] = useState("");
   const [classInterest, setClassInterest] = useState("");
   const [interested, setInterested] = useState([]);
-
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     await getConnect();
@@ -34,13 +31,12 @@ export default function AdmissionForm() {
       alert("User Created ")
     }
   };
-
-  const checkBox = [
-    { value: "School", label: "School" },
-    { value: "English", label: "English" },
-    { value: "it", label: "it" },
-    { value: "Coaching", label: "Coaching" },
-  ]
+  const checkbox = [
+    { value: "School", lable: "School" },
+    { value: "English", lable: "English" },
+    { value: "IT", lable: "IT" },
+    { value: "Coaching", lable: "Coaching" },
+  ];
   const handleChange = (e) => {
     const checked = e.target.checked;
     const value = e.target.value;
@@ -50,6 +46,7 @@ export default function AdmissionForm() {
       setInterested(interested.filter((item) => item !== value));
     }
   };
+
   return (
     <>
       <div className="p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-3/4  max-lg:mb-5 mb-5    mx-auto">
@@ -87,31 +84,34 @@ export default function AdmissionForm() {
               />
             </div>
 
+
             <div className="flex max-lg:flex-wrap space-x-2">
-              {/* <h1>Interested In</h1>
-              <label>School</label>
-              <input type="checkbox" name={interested.school} value={interested.school} onChange={handleChange} />
-              <label>English</label>
-              <input type="checkbox" value={interested.english} onChange={handleChange} />
-              <label>IT</label>
-              <input type="checkbox" value={interested.it} onChange={handleChange} />
-              <label>Coaching</label>
-              <input type="checkbox" value={interested.coaching} onChange={handleChange} /> */}
-              {checkBox.map((checkbox) => (
+              {checkbox.map((checkbox) => (
                 <>
                   <input
                     type="checkbox"
-                    key={checkbox.value}
-                    name="interested"
                     value={checkbox.value}
+                    name="interested"
+                    key={checkbox.value}
                     checked={interested.includes(checkbox.value)}
                     onChange={handleChange}
                   />
-                  <label>{checkbox.label}</label>
+                  <lable>{checkbox.lable}</lable>
                 </>
               ))}
-            </div>
 
+
+            </div>
+            <div className="flex max-lg:flex-wrap max-lg:space-x-1  space-x-4 items-center">
+              <label>Class Interested In</label>
+              <input
+                className="border border-gray-400 py-2 px-2 rounded-lg"
+                type="text"
+                placeholder="ex: K.G"
+                value={classInterest}
+                onChange={(e) => setClassInterest(e.target.value)}
+              />
+            </div>
             <div className="mt-9">
               <div className="flex justify-center">
                 <button className="bg-green-500 px-10 hover:bg-green-600 duration-200 py-2 text-white">
