@@ -17,7 +17,6 @@ export default function AdmissionForm() {
     coaching: false,
     english: false,
   };
-  const [checkbox, setCheckedState] = useState({});
   const handleSubmit = async (e) => {
     e.preventDefault();
     await getConnect();
@@ -48,30 +47,22 @@ export default function AdmissionForm() {
     setEmail("");
     setInterested("");
 
-    //submit form
-    // const document = {
-    //   name,
-    //   fatherName,
-    //   contact,
-    //   email,
-    //   checkbox,
+const checkbox = [
+    { value: "School", lable: "School" },
+    { value: "English", lable: "English" },
+    { value: "IT", lable: "IT" },
+    { value: "Coaching", lable: "Coaching" },
+  ];
+  const handleChange = (e) => {
+    const checked = e.target.checked;
+    const value = e.target.value;
+    if (checked && !interested.includes(value)) {
+      setinterestede([...interested, value]);
+    } else if (!checked && interested.includes(value)) {
+      setinterestede(interested.filter((item) => item !== value));
+    }
   };
 
-  // // Save the document to Appwrite
-  // const data = document;
-  // await databases.createDocument(
-  //   "6537b84f581243c8d965",
-  //   "6537bef49fd2fe4d0630",
-  //   ID.unique(),
-  //   data
-  // );
-  // console.log(data);
-
-  // const handleChange = (e) => {
-  //   // const newCheckBox = { ...checkbox };
-  //   // newCheckBox[e.target.value] = e.target.checkd;
-  //   // setCheckedState(newCheckBox);
-  // };
   return (
     <>
       <div className="p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-3/4  max-lg:mb-5 mb-5    mx-auto">
@@ -109,16 +100,23 @@ export default function AdmissionForm() {
               />
             </div>
 
+            
             <div className="flex max-lg:flex-wrap space-x-2">
-              <h1>Interested In</h1>
-              <label>School</label>
-              <input type="checkbox" value={checkbox.school} />
-              <label>English</label>
-              <input type="checkbox" value={checkbox.english} />
-              <label>IT</label>
-              <input type="checkbox" value={checkbox.it} />
-              <label>Coaching</label>
-              <input type="checkbox" value={checkbox.coaching} />
+              {checkbox.map((checkbox) => (
+                <>
+                  <input
+                    type="checkbox"
+                    value={checkbox.value}
+                    name="interested"
+                    key={checkbox.value}
+                    checked={interested.includes(checkbox.value)}
+                    onChange={handleChange}
+                  />
+                  <lable>{checkbox.lable}</lable>
+                </>
+              ))}
+
+            
             </div>
             <div className="flex max-lg:flex-wrap max-lg:space-x-1  space-x-4 items-center">
               <label>Class Interested In</label>
