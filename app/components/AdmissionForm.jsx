@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
-import getConnect from "@/libs/connection";
-
-// import { databases, ID, account } from "@/appwrite";
+import { client, ID, Databases } from '@/appwrite'
 
 export default function AdmissionForm() {
   const [name, setName] = useState("");
@@ -11,26 +9,30 @@ export default function AdmissionForm() {
   const [email, setEmail] = useState("");
   const [classInterest, setClassInterest] = useState("");
   const [interested, setInterested] = useState([]);
+  const database = new Databases(client);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await getConnect();
 
-    const response = await fetch("http://localhost:3000/api/user", {
-      method: "POST",
-      body: JSON.stringify({
-        name,
-        email,
-        fatherName,
-        phoneNumber: contact,
-        interested,
-      })
+    const databaseId = "6537b84f581243c8d965";
+    const collectionId = "6537bef49fd2fe4d0630";
+    const data = {
+      name,
+      email,
+      fatherName,
+      contact,
+      interested,
+      classInterest,
+    };
 
-    })
-    console.log(response)
-    if (response.ok) {
-      alert("User Created ")
+
+      // Create the user if the email address does not exist
+      const response = await database.createDocument(databaseId, collectionId, ID.unique(), data);
+
+      // Check the response status code
+      alert("User Created")
     }
-  };
+ 
   const checkbox = [
     { value: "School", lable: "School" },
     { value: "English", lable: "English" },
@@ -86,7 +88,7 @@ export default function AdmissionForm() {
 
 
             <div className="flex max-lg:flex-wrap space-x-2">
-              {checkbox.map((checkbox) => (
+              {checkbox.map((checkbox, i) => (
                 <>
                   <input
                     type="checkbox"
