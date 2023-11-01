@@ -1,53 +1,67 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import { Databases, Client } from 'appwrite'
+import Card from './Card'
 
 const FormsDetails = () => {
-    const [data, setData] = useState(null)
+
+    const client = new Client();
+    client
+        .setEndpoint('https://cloud.appwrite.io/v1')
+        .setProject('6533c1336f3a644753c1');
+    const [data, setData] = useState([]);
     useEffect(() => {
+        const databaseId = '6537b84f581243c8d965'
+        const collectionId = "6537bef49fd2fe4d0630"
+        const database = new Databases(client);
         const fetchData = async () => {
-            let response = await fetch("http://localhost:3000/api/user", {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            let result = await response.json();
-            setData(result);
+            let response = await database.listDocuments(databaseId, collectionId)
+
+            setData(response.documents)
+            console.log(data)
+            console.log(response)
+
         }
-        fetchData();
-    }, [])
+        fetchData()
+
+    }, []);
     return (
         <>
-            {data && data.length === 0 ? (
-                <div className="text-2xl font-bold mx-60">
-                    <h2>No Data</h2>
-                </div>
-            ) : <table className="table-auto">
-                <thead >
-                    <tr>
-                        <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Name</th>
-                        <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Father Name</th>
-                        <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Email</th>
-                        <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Contact</th>
-                        <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Interested In</th>
-                    </tr>
-                </thead>
-                {data && data.map((item) => (
 
-                    <tbody key={item._id}>
+            <Card>
+                {data && data.length === 0 ? (
+                    <div className="text-2xl font-bold mx-60">
+                        <h2>No Data</h2>
+                    </div>
+                ) : <table className="table-auto">
+                    <thead >
                         <tr>
-                            <td className="px-6 py-4 text-left">{item.name}</td>
-                            <td className="px-6 py-4 text-left">{item.fatherName}</td>
-                            <td className="px-6 py-4 text-left">{item.email}</td>
-                            <td className="px-6 py-4 text-left">{item.phoneNumber}</td>
-                            <td className="px-6 py-4 text-left">{item.interested}</td>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Name</th>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Father Name</th>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Email</th>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Contact</th>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Class Interested</th>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Interested In</th>
                         </tr>
+                    </thead>
+                    {data && data.map((item, i) => (
 
-                    </tbody>
-                ))}
-            </table>
-            }
+                        <tbody key={i}>
+                            <tr>
+                                <td className="px-6 py-4 text-left">{item.name}</td>
+                                <td className="px-6 py-4 text-left">{item.fatherName}</td>
+                                <td className="px-6 py-4 text-left">{item.email}</td>
+                                <td className="px-6 py-4 text-left">{item.contact}</td>
+                                <td className="px-6 py-4 text-left">{item.classInterest}</td>
+                                <td className="px-6 py-4 text-left">{item.interested}</td>
+                            </tr>
 
+                        </tbody>
+                    ))}
+
+                </table>
+                }
+            </Card>
         </>
     )
 }

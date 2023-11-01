@@ -7,7 +7,7 @@ client
     .setProject('6533c1336f3a644753c1'); // Replace with your project ID
 
 const database = new Databases(client);
-export const account = new Account(client);
+const account = new Account(client);
 
 // Export the client object
 export {ID,Databases} from 'appwrite';

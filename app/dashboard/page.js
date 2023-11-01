@@ -4,7 +4,12 @@ import DashboardBox from "./components/DashboardBox";
 const page = () => {
   return (
     <>
-      <DashboardBox />
+      
+      
+      <div className="grow">
+        <DashboardBox />
+      </div>
+      
     </>
   );
 };
