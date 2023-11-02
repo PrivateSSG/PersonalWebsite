@@ -36,12 +36,12 @@ const FormsDetails = () => {
                 ) : <table className="table-auto">
                     <thead >
                         <tr>
-                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Name</th>
-                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Father Name</th>
-                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Email</th>
-                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Contact</th>
-                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Class Interested</th>
-                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold">Interested In</th>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold text-[10px]">Name</th>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold text-[10px]">Father Name</th>
+                            <th className="px-6 py-3 text-center text-gray-700 uppercase font-bold text-[10px]">Email</th>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold text-[10px]">Contact</th>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold text-[10px]">Interested In</th>
+                            <th className="px-6 py-3 text-left text-gray-700 uppercase font-bold text-[10px]">Class Interested</th>
                         </tr>
                     </thead>
                     {data && data.map((item, i) => (
@@ -52,8 +52,8 @@ const FormsDetails = () => {
                                 <td className="px-6 py-4 text-left">{item.fatherName}</td>
                                 <td className="px-6 py-4 text-left">{item.email}</td>
                                 <td className="px-6 py-4 text-left">{item.contact}</td>
-                                <td className="px-6 py-4 text-left">{item.classInterest}</td>
                                 <td className="px-6 py-4 text-left">{item.interested}</td>
+                                <td className="px-6 py-4 text-left">{item.classInterest}</td>
                             </tr>
 
                         </tbody>

@@ -6,7 +6,7 @@ const layout = ({ children }) => {
     <>
 
 
-      <div className="flex mx-auto max-w-6xl gap-4 ">
+      <div className="flex mx-auto max-w-6xl  gap-4 ">
         <div className="w-1/5">
           <Sidebar />
         </div>
