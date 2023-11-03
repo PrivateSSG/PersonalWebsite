@@ -1,7 +1,8 @@
-import React from 'react'
+import ClassDi from "@/app/components/ClassDi";
+import PdfDownloadFun from "@/app/components/PdfDownloadFun";
 
 export default function page() {
   return (
-    <div>Level One Student Information</div>
+    <PdfDownloadFun gradeName={"PG Class"}  bucketId={"65438b60d7c109a7a7d5"}/>
   )
 }

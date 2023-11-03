@@ -1,37 +1,76 @@
-"use client"
-import { useState } from "react"
-import PSDFKit from 'pspdfkit'
-import { Client, ID, Storage } from 'appwrite'
-const client = new Client();
-client.setEndpoint('https://cloud.appwrite.io/v1')
-client.setProject("6533c1336f3a644753c1")
-const storage = new Storage(client)
-
+import PdfDownloadFun from "./PdfDownloadFun";
+import UploadFunc from "./UploadFunc";
 const UploadDownloadPDF = () => {
-    const [file, setFile] = useState(null)
-    const handleFileUpload = async (e) => {
-        if (file === null) {
-            return
-        }
-        //upload file
-        const response = await storage.createFile("65438b60d7c109a7a7d5",ID.unique(),file)
-        //get file
-        const fileUrl = storage.getFileDownload(response.$id)
 
-        //open the pdf
-        const psdfkit = new PSDFKit();
-        psdfkit.open(fileUrl)
-
-
-    }
     return (
         <>
-            <h1>UPlaod and display file</h1>
-            <input type="file" onChange={((e) => setFile(e.target.files[0]))} />
-            <button onClick={handleFileUpload}>UPload</button>
+
+            <div>
+                <div className="flex grow">
+
+                    <PdfDownloadFun bucketId="65438b60d7c109a7a7d5" gradeName={"PG"} />
+                    <UploadFunc bucketId={"65438b60d7c109a7a7d5"} gradeName={"Upload PDF for PG Class"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544e599d70bbf72fe75" gradeName={"KG"} />
+                    <UploadFunc bucketId={"6544e599d70bbf72fe75"} gradeName={"Upload PDF for KG Class"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544ed5b0c57db9d68ef" gradeName={"Nursery Class"} />
+                    <UploadFunc bucketId={"6544ed5b0c57db9d68ef"} gradeName={"Upload PDF for Nursery Class"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544ed78792055286a91" gradeName={"Grade One"} />
+                    <UploadFunc bucketId={"6544ed78792055286a91"} gradeName={"Upload PDF for Grade-One"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544ed8fbada4a89c1fb" gradeName={"Grade Two"} />
+                    <UploadFunc bucketId={"6544ed8fbada4a89c1fb"} gradeName={"Upload PDF for Grade-Two"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544eda63956504db9ab" gradeName={"Grade three"} />
+                    <UploadFunc bucketId={"6544eda63956504db9ab"} gradeName={"Upload PDF for Grade-Three"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544edbdc2cc649e5ed8" gradeName={"Grade Four"} />
+                    <UploadFunc bucketId={"6544edbdc2cc649e5ed8"} gradeName={"Upload PDF for Grade-Four"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544edcfa12fa74effef" gradeName={"Grade Five"} />
+                    <UploadFunc bucketId={"6544edcfa12fa74effef"} gradeName={"Upload PDF for Grade-Five"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544e599d70bbf72fe75" gradeName={"Grade Six"} />
+                    <UploadFunc bucketId={"6544e599d70bbf72fe75"} gradeName={"Upload PDF for Grade-Three"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544e599d70bbf72fe75" gradeName={"Grade Seven"} />
+                    <UploadFunc bucketId={"6544e599d70bbf72fe75"} gradeName={"Upload PDF for Grade-Three"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544e599d70bbf72fe75" gradeName={"Grade Eiht"} />
+                    <UploadFunc bucketId={"6544e599d70bbf72fe75"} gradeName={"Upload PDF for Grade-Six"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544e599d70bbf72fe75" gradeName={"Grade Nine"} />
+                    <UploadFunc bucketId={"6544e599d70bbf72fe75"} gradeName={"Upload PDF for Grade-Seven"} />
+                </div>
+
+            </div>
 
         </>
-    )
-}
+    );
+};
 
-export default UploadDownloadPDF
+export default UploadDownloadPDF;

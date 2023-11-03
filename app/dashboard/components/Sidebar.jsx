@@ -20,6 +20,10 @@ export default function Sidebar() {
               <VscRepo size={25} />
               <h1 className="max-lg:text-[13px]">Forms</h1>
             </div></Link>
+            <Link href={"/dashboard/dairies"}><div className="withsvg flex space-x-1 items-center hover:text-slate-500">
+              <VscRepo size={25} />
+              <h1 className="max-lg:text-[13px]">Diaries</h1>
+            </div></Link>
 
           </div>
         </div>

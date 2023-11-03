@@ -3,9 +3,9 @@ export default function page() {
   return (
     <div className='student-container'>
         <h1 className='text-2xl'>Student Diaries</h1>
-        <p><Link href={"student-diaries/level/KG"}>Class Play Group</Link></p>
+        <p><Link href={"student-diaries/level/PG"}>Class Play Group</Link></p>
         <p><Link href={"student-diaries/level/Nursery"}>Class Nursery</Link></p>
-        <p><Link href={"student-diaries/level/PG"}>Class Kindergarten</Link></p>
+        <p><Link href={"student-diaries/level/KG"}>Class Kindergarten</Link></p>
         <p><Link href={"student-diaries/level/Grade-One"}>Class Grade One</Link></p>
         <p><Link href={"student-diaries/level/Grade-Two"}>Class Grade Two</Link></p>
         <p><Link href={"student-diaries/level/Grade-Three"}>Class Grade Three</Link></p>
