@@ -49,22 +49,22 @@ const UploadDownloadPDF = () => {
                 <div className="flex">
 
                     <PdfDownloadFun bucketId="6544e599d70bbf72fe75" gradeName={"Grade Six"} />
-                    <UploadFunc bucketId={"6544e599d70bbf72fe75"} gradeName={"Upload PDF for Grade-Three"} />
-                </div>
-                <div className="flex">
-
-                    <PdfDownloadFun bucketId="6544e599d70bbf72fe75" gradeName={"Grade Seven"} />
-                    <UploadFunc bucketId={"6544e599d70bbf72fe75"} gradeName={"Upload PDF for Grade-Three"} />
-                </div>
-                <div className="flex">
-
-                    <PdfDownloadFun bucketId="6544e599d70bbf72fe75" gradeName={"Grade Eiht"} />
                     <UploadFunc bucketId={"6544e599d70bbf72fe75"} gradeName={"Upload PDF for Grade-Six"} />
                 </div>
                 <div className="flex">
 
-                    <PdfDownloadFun bucketId="6544e599d70bbf72fe75" gradeName={"Grade Nine"} />
-                    <UploadFunc bucketId={"6544e599d70bbf72fe75"} gradeName={"Upload PDF for Grade-Seven"} />
+                    <PdfDownloadFun bucketId="6544edfadbcb202bd369" gradeName={"Grade Seven"} />
+                    <UploadFunc bucketId={"6544edfadbcb202bd369"} gradeName={"Upload PDF for Grade-Seven"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544ee14e134f523f42e" gradeName={"Grade Eight"} />
+                    <UploadFunc bucketId={"6544ee14e134f523f42e"} gradeName={"Upload PDF for Grade-Eight"} />
+                </div>
+                <div className="flex">
+
+                    <PdfDownloadFun bucketId="6544ee2c333fe6a28b6a" gradeName={"Grade Nine"} />
+                    <UploadFunc bucketId={"6544ee2c333fe6a28b6a"} gradeName={"Upload PDF for Grade-Nine"} />
                 </div>
 
             </div>
