@@ -21,7 +21,6 @@ const UploadPicture = ({ bucketId, aname, dataId,collectionId }) => {
             date
         }
         const data = await database.createDocument(dataId,collectionId,ID.unique(),myData)
-        da
         if (file === null) {
             return;
         }

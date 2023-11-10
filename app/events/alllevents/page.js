@@ -1,10 +1,10 @@
 
-import ShowEventsPictures from '../components/ShowEventsPictures'
+import AllEventPic from '../components/AllEventPic'
   export default function allevents() {
     
     return (
       <>
-        <ShowEventsPictures name={"All Events"} bucketId={"65463670ac798a2879e7"}   />
+        <AllEventPic bucketId={"65463670ac798a2879e7"}  aname={"All Events"} />
       </>
     )
   }
