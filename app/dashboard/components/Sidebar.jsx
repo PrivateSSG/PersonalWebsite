@@ -24,13 +24,25 @@ export default function Sidebar() {
               <VscRepo size={25} />
               <h1 className="max-lg:text-[13px]">Diaries</h1>
             </div></Link>
+            <Link href={"/dashboard/syllabus"}><div className="withsvg flex space-x-1 items-center hover:text-slate-500">
+              <VscRepo size={25} />
+              <h1 className="max-lg:text-[13px]">Syllabus</h1>
+            </div></Link>
             <Link href={"/dashboard/jobForm"}><div className="withsvg flex space-x-1 items-center hover:text-slate-500">
               <VscRepo size={25} />
               <h1 className="max-lg:text-[13px]">Job Forms</h1>
             </div></Link>
+            <Link href={"/dashboard/result"}><div className="withsvg flex space-x-1 items-center hover:text-slate-500">
+              <VscRepo size={25} />
+              <h1 className="max-lg:text-[13px]">Result Card</h1>
+            </div></Link>
             <Link href={"/dashboard/picture"}><div className="withsvg flex space-x-1 items-center hover:text-slate-500">
               <VscRepo size={25} />
-              <h1 className="max-lg:text-[13px]">Pictures</h1>
+              <h1 className="max-lg:text-[13px]">Event Pictures</h1>
+            </div></Link>
+            <Link href={"/dashboard/student-picture"}><div className="withsvg flex space-x-1 items-center hover:text-slate-500">
+              <VscRepo size={25} />
+              <h1 className="max-lg:text-[13px]">Student Pictures</h1>
             </div></Link>
 
           </div>

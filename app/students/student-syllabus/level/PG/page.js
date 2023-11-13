@@ -1,7 +1,10 @@
+import PdfDownloadFun from '@/app/components/PdfDownloadFun'
 import React from 'react'
 
 export default function page() {
   return (
-    <div>Level One Student Information</div>
+    <>
+    <PdfDownloadFun gradeName={"PG Class Syllabus"} bucketId={"654e289e43a797e7bd5d"} />
+    </>
   )
 }

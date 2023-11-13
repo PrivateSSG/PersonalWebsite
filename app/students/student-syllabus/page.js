@@ -7,9 +7,9 @@ export default function page() {
         <h1 className='text-2xl'>Student Syllabus</h1>
         
         
-        <p><Link href={"student-syllabus/level/KG"}>Class Play Group</Link></p>
+        <p><Link href={"student-syllabus/level/PG"}>Class Play Group</Link></p>
         <p><Link href={"student-syllabus/level/Nursery"}>Class Nursery</Link></p>
-        <p><Link href={"student-syllabus/level/PG"}>Class Kindergarten</Link></p>
+        <p><Link href={"student-syllabus/level/KG"}>Class Kindergarten</Link></p>
         <p><Link href={"student-syllabus/level/Grade-One"}>Class Grade One</Link></p>
         <p><Link href={"student-syllabus/level/Grade-Two"}>Class Grade Two</Link></p>
         <p><Link href={"student-syllabus/level/Grade-Three"}>Class Grade Three</Link></p>

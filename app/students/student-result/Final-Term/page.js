@@ -1,6 +1,9 @@
+import PdfDownloadFun from "@/app/components/PdfDownloadFun";
 
 export default function page() {
   return (
-    <div>Final Term</div>
+    <>
+    <PdfDownloadFun gradeName={"Final-Term Results"} bucketId={"654f6318b65e14eacdcf"} />
+    </>
   )
 }

@@ -23,48 +23,48 @@ const UploadpdfForSyllabus = () => {
                 </div>
                 <div className="flex">
 
-                    <PdfDownloadFun bucketId="6544ed78792055286a91" gradeName={"Grade One"} />
-                    <UploadFunc bucketId={"6544ed78792055286a91"} gradeName={"Upload PDF for Grade-One"} />
+                    <PdfDownloadFun bucketId="654f59b5c0f89c884374" gradeName={"Grade One Syllabus"} />
+                    <UploadFunc bucketId={"654f59b5c0f89c884374"} gradeName={"Upload Syllabus PDF for Grade-One"} />
                 </div>
                 <div className="flex">
 
-                    <PdfDownloadFun bucketId="6544ed8fbada4a89c1fb" gradeName={"Grade Two"} />
-                    <UploadFunc bucketId={"6544ed8fbada4a89c1fb"} gradeName={"Upload PDF for Grade-Two"} />
+                    <PdfDownloadFun bucketId="654f59e0a5d14a0cf6ff" gradeName={"Grade Two Syllabus"} />
+                    <UploadFunc bucketId={"654f59e0a5d14a0cf6ff"} gradeName={"Upload Syllabus PDF for Grade-Two"} />
                 </div>
                 <div className="flex">
 
-                    <PdfDownloadFun bucketId="6544eda63956504db9ab" gradeName={"Grade three"} />
-                    <UploadFunc bucketId={"6544eda63956504db9ab"} gradeName={"Upload PDF for Grade-Three"} />
+                    <PdfDownloadFun bucketId="654f5a01bc85e4eb79fe" gradeName={"Grade Three Syllabus"} />
+                    <UploadFunc bucketId={"654f5a01bc85e4eb79fe"} gradeName={"Upload Syllabus PDF for Grade-Three"} />
                 </div>
                 <div className="flex">
 
-                    <PdfDownloadFun bucketId="6544edbdc2cc649e5ed8" gradeName={"Grade Four"} />
-                    <UploadFunc bucketId={"6544edbdc2cc649e5ed8"} gradeName={"Upload PDF for Grade-Four"} />
+                    <PdfDownloadFun bucketId="654f5a2ca705d18f9ed9" gradeName={"Grade Four Syllabus"} />
+                    <UploadFunc bucketId={"654f5a2ca705d18f9ed9"} gradeName={"Upload Syllabus PDF for Grade-Four"} />
                 </div>
                 <div className="flex">
 
-                    <PdfDownloadFun bucketId="6544edcfa12fa74effef" gradeName={"Grade Five"} />
-                    <UploadFunc bucketId={"6544edcfa12fa74effef"} gradeName={"Upload PDF for Grade-Five"} />
+                    <PdfDownloadFun bucketId="654f5a51a3a2f89dccf8" gradeName={"Grade Five Syllabus"} />
+                    <UploadFunc bucketId={"654f5a51a3a2f89dccf8"} gradeName={"Upload Syllabus PDF for Grade-Five"} />
                 </div>
                 <div className="flex">
 
-                    <PdfDownloadFun bucketId="6544e599d70bbf72fe75" gradeName={"Grade Six"} />
-                    <UploadFunc bucketId={"6544e599d70bbf72fe75"} gradeName={"Upload PDF for Grade-Six"} />
+                    <PdfDownloadFun bucketId="654f5b794e79d58b2e27" gradeName={"Grade Six Syllabus"} />
+                    <UploadFunc bucketId={"654f5b794e79d58b2e27"} gradeName={"Upload Syllabus PDF for Grade-Six"} />
                 </div>
                 <div className="flex">
 
-                    <PdfDownloadFun bucketId="6544edfadbcb202bd369" gradeName={"Grade Seven"} />
-                    <UploadFunc bucketId={"6544edfadbcb202bd369"} gradeName={"Upload PDF for Grade-Seven"} />
+                    <PdfDownloadFun bucketId="654f5ba86d2337d60b13" gradeName={"Grade Seven Syllabus"} />
+                    <UploadFunc bucketId={"654f5ba86d2337d60b13"} gradeName={"Upload Syllabus PDF for Grade-Seven"} />
                 </div>
                 <div className="flex">
 
-                    <PdfDownloadFun bucketId="6544ee14e134f523f42e" gradeName={"Grade Eight"} />
-                    <UploadFunc bucketId={"6544ee14e134f523f42e"} gradeName={"Upload PDF for Grade-Eight"} />
+                    <PdfDownloadFun bucketId="654f5bcb64f24d9ec4de" gradeName={"Grade Eight Syllabus"} />
+                    <UploadFunc bucketId={"654f5bcb64f24d9ec4de"} gradeName={"Upload Syllabus PDF for Grade-Eight"} />
                 </div>
                 <div className="flex">
 
-                    <PdfDownloadFun bucketId="6544ee2c333fe6a28b6a" gradeName={"Grade Nine"} />
-                    <UploadFunc bucketId={"6544ee2c333fe6a28b6a"} gradeName={"Upload PDF for Grade-Nine"} />
+                    <PdfDownloadFun bucketId="654f5be934a29dd468b0" gradeName={"Grade Nine Syllabus"} />
+                    <UploadFunc bucketId={"654f5be934a29dd468b0"} gradeName={"Upload Syllabus PDF for Grade-Nine"} />
                 </div>
 
             </div>
