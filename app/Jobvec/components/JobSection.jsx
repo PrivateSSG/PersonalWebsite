@@ -27,7 +27,7 @@ export default function JobSection({ job, hour, skill, place, salary }) {
               </p>
             </div>
             <button className="bg-blue-500 text-white px-8 mt-8 py-1 rounded-lg max-lg:px-4">
-              <Link href={"Jobvec/form"}>Apply Now</Link>
+              <Link href={"Jobvec/form"}>Teacher Performa</Link>
             </button>
           </div>
         </div>
