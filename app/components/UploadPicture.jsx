@@ -30,9 +30,9 @@ const UploadPicture = ({ bucketId, aname, dataId,collectionId }) => {
         // setFile(response);
         setImageUrl(response.url)
         setUploading(false);
+        alert("Event Picture Uploaded")
         setName("")
         setDate("")
-        alert("Event Picture Uploaded")
 
     }
     return (

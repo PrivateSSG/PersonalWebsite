@@ -16,7 +16,7 @@ export default function EventPictureBox({eventName,year,pic}) {
 
         <h1 className="px-2 py-2">{eventName}</h1>
         <p className="px-2 py-2">{year}</p>
-        <button className="bg-green-600 w-full p-1 text-white">See Events</button>
+
        </div>
 
         </div>
