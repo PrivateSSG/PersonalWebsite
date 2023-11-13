@@ -19,18 +19,13 @@ export default function RootLayout({ children }) {
             <div className="text-center flex flex-col space-y-3 ">
               <h1 className="text-2xl font-bold">CONTACT US</h1>
               <p className="underline text-[12px] font-mono">
-                2277 South 3000 East
-              </p>
-              <p className="underline text-[12px] font-mono">
-                St. George, UT 84790
+                Round Abouts, Satellite Town Rd, Quetta
               </p>
               <p className="text-[12px]">
                 Phone:
-                <span className="underline text-[12px]">435-673-2232 </span> |
-                Fax: 435-673-2232{" "}
-              </p>
+                <span className="underline text-[12px]">(081) 2440871</span></p>
               <p className="text-[15px]">
-                Copyright 2021 George Washington Academy | Website by Morweb.org
+                Copyright 2023 PEARL SATELLITE EDUCATIONAL INSTITUTE | Website by Manzoor
               </p>
             </div>
           </div>
