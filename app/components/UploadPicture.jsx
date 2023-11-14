@@ -7,7 +7,7 @@ client.setEndpoint("https://cloud.appwrite.io/v1");
 client.setProject("6533c1336f3a644753c1");
 const storage = new Storage(client);
 const database = new Databases(client)
-const UploadPicture = ({ bucketId, aname, dataId,collectionId }) => {
+const   UploadPicture = ({ bucketId, aname, dataId,collectionId }) => {
     const [imageUrl, setImageUrl] = useState(null);
     const [name, setName] = useState("")
     const [date, setDate] = useState("")

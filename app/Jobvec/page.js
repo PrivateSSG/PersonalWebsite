@@ -7,7 +7,6 @@ export default function page() {
       <h1 className="text-center text-2xl font-bold">Job Vacancies</h1>
       <JobSection
         job="Job for Teaching"
-        hour="3 Hour"
       />
       
     </>

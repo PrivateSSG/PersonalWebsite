@@ -28,7 +28,7 @@ const EveryEventFetch = ({ aname, bucketId, docDataId, docColId }) => {
 
 
             const allEvent = await allevents.documents;
-            // setEvents(allEvent)
+            setEvents(allEvent)
 
         }
         fetchData()

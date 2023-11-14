@@ -20,12 +20,6 @@ export default function JobSection({ job, hour, skill, place, salary }) {
             </ul>
           </div>
           <div>
-            <div className="price-and-img flex space-x-1 items-center justify-center">
-              <CiDollar size={17} />
-              <p>
-                ${salary} <span className="text-gray-400 max-lg:text-[9px]">/Year</span>
-              </p>
-            </div>
             <button className="bg-blue-500 text-white px-8 mt-8 py-1 rounded-lg max-lg:px-4">
               <Link href={"Jobvec/form"}>Teacher Performa</Link>
             </button>
