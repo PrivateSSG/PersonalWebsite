@@ -33,7 +33,7 @@ const EveryEventFetch = ({ aname, bucketId, docDataId, docColId }) => {
         }
         fetchData()
     }, [])
-
+console.log(images)
     return (
         <>
 
