@@ -26,11 +26,6 @@ export default function Events() {
           </Link>
         </button>
         <button className="border-b-2 border-gray-300 hover:border-gray-400 transition duration150 active:border-gray-400">
-          <Link href={"/events/previous"} as={"/events/previous"}>
-            Previous Events
-          </Link>
-        </button>
-        <button className="border-b-2 border-gray-300 hover:border-gray-400 transition duration150 active:border-gray-400">
           <Link href={"/events/upcomingevents"}>Upcoming Events</Link>
         </button>
       </div>

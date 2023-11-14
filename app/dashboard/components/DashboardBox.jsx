@@ -55,7 +55,7 @@ const DashboardBox = () => {
   return (
     <>
       <Card>
-        <h1 className="text-2xl text-teal-600 font-bold">Dashboard</h1>
+        <h1 className="text-2xl text-teal-600 font-bold max-lg:text-sm">Dashboard</h1>
         <div className="max-lg:space-x-3 flex space-x-5 mt-3 mb-3 max-lg:flex-wrap max-lg:flex-col max-lg:space-y-5 max-lg:items-center max-lg:justify-center">
           <button onClick={() => handleClickCategory("English")} className="bg-sky-500 p-3 text-white font-bold max-lg:p-4">
             English Student Forms <span>{englishForm}</span>

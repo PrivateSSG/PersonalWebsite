@@ -23,3 +23,4 @@ export default function EventPictureBox({eventName,year,pic}) {
     </>
   )
 }
+https://psei-website.vercel.app/events/upcomingevents
